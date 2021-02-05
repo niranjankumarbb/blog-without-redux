@@ -5,9 +5,7 @@ function Home(props){
     return (
         <div>
             <h1>  Welcome to the blog</h1>
-        </div>
-        
-        
+        </div>   
     )
 }
 export default Home

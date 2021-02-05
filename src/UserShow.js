@@ -8,8 +8,7 @@ class UserShow extends React.Component {
         super()
         this.state ={
             user:{},
-            posts:[]
-        
+            posts:[]        
         }
     }
    
@@ -19,37 +18,27 @@ class UserShow extends React.Component {
          .then((response)=>{
              const user= response.data
              this.setState({user})
-
          })
-
          axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
          .then((response)=>{
              const posts= response.data
              this.setState({posts})
-
          })
      }
-
-
 
     render() {
         console.log(this.props)
         return (
             <div> 
                 <h2>User Name : {this.state.user.name}</h2>
-
                 <h2> Posts Written by user</h2>
-
                 <ul>
                 {this.state.posts.map(post => {
                     return <li key={post.id}> <Link to={`/posts/${post.id}`}>{post.title}
                     </Link></li>
                 })}
-            </ul>
-                
-
-
-            </div> 
+            </ul>  
+          </div> 
         )
     }
 }

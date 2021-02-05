@@ -16,15 +16,13 @@ class UsersList extends React.Component{
             const users = response.data
             this.setState({users})
         })
-
         .catch((err)=>{
             console.log(err)
         })
     }
 
     render(){
-        //console.log(this.props)
-        return (
+         return (
         <div>
             <h1> Users List - {this.state.users.length}</h1>
             <ul>

@@ -11,13 +11,11 @@ class PostsList extends React.Component{
     }
 
     componentDidMount(){
-        //console.log(this.props)
-        axios.get('http://jsonplaceholder.typicode.com/posts')
+         axios.get('http://jsonplaceholder.typicode.com/posts')
         .then((response)=>{
             const posts = response.data
             this.setState({posts})
         })
-
         .catch((err)=>{
             console.log(err)
         })
@@ -30,14 +28,12 @@ class PostsList extends React.Component{
             <ul>
                 {
                     this.state.posts.map((post, i)=>{
-                return <li key={post.id}><Link to={`/posts/${i+1}`}>
+                     return <li key={post.id}><Link to={`/posts/${i+1}`}>
                         {post.title}</Link></li>
                     })
                 }
             </ul>
         </div>
-
-
         )
     }
 }

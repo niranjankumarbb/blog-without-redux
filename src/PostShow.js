@@ -46,9 +46,7 @@ class PostShow extends React.Component {
          })
          .catch((err) =>{
             console.log(err)
-        })
-        
-
+        }) 
                   
      }
 
@@ -59,17 +57,14 @@ class PostShow extends React.Component {
                 <h2>User Name : {this.state.user.name}</h2>
                 <h4>Title : {this.state.post.title} </h4>
                 <h4>Body : {this.state.post.body} </h4>
-
                 <h4>Comments </h4>
-
                  <ul>{
                     this.state.comments.map(comment=>{
                     return <li key={comment.id}>{comment.body} </li>
                      } )}
                     </ul> 
-
                     <Link to={`/users/${this.state.user.id}`} >More posts of the authors</Link>                
-                    
+         
             </div> 
         )
     }
