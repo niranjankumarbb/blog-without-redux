@@ -2,7 +2,6 @@ import React from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 
-
 class PostShow extends React.Component {
     constructor(){
         super()
@@ -25,15 +24,12 @@ class PostShow extends React.Component {
                    console.log(response.data)
                    const user= response.data
                     this.setState({user})
-         })
+             })
          })
          .catch((err) =>{
             console.log(err)
-        })
-
-        
-
-          .catch((err) =>{
+        })       
+      .catch((err) =>{
             console.log(err)
         })
         },2000)
@@ -46,8 +42,7 @@ class PostShow extends React.Component {
          })
          .catch((err) =>{
             console.log(err)
-        }) 
-                  
+        })                   
      }
 
     render() {
@@ -63,11 +58,9 @@ class PostShow extends React.Component {
                     return <li key={comment.id}>{comment.body} </li>
                      } )}
                     </ul> 
-                    <Link to={`/users/${this.state.user.id}`} >More posts of the authors</Link>                
-         
+                    <Link to={`/users/${this.state.user.id}`} >More posts of the authors</Link>              
             </div> 
         )
     }
 }
-
 export default PostShow

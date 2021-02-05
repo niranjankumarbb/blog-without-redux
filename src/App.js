@@ -7,6 +7,7 @@ import PostsList from './PostsList'
 import PostShow from './PostShow'
 
  function App(props){
+
      return (
          <BrowserRouter>
           <div>
@@ -18,8 +19,7 @@ import PostShow from './PostShow'
               <Route path='/users' component = {UsersList}  exact ={true}/>
               <Route path='/users/:id' component = {UserShow} />
               <Route path='/posts'  component = {PostsList}  exact={true}/>
-              <Route path='/posts/:id'  component = {PostShow} />
-  
+              <Route path='/posts/:id'  component = {PostShow} />  
           </div>
          </BrowserRouter>
      )
