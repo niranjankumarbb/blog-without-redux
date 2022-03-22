@@ -15,7 +15,7 @@ import PostShow from './PostShow'
               <Link to='/users'> Users</Link>
               <Link to='/posts'> Posts</Link>
  
-              <Route path='/'      component = {Home} exact={true} />
+              <Route path='/' component = {Home} exact={true} />
               <Route path='/users' component = {UsersList}  exact ={true}/>
               <Route path='/users/:id' component = {UserShow} />
               <Route path='/posts'  component = {PostsList}  exact={true}/>
