@@ -30,7 +30,7 @@ class PostShow extends React.Component {
             console.log(err)
         })       
       .catch((err) =>{
-            console.log(err)
+            console.error(err)
         })
         },2000)
         
@@ -41,7 +41,7 @@ class PostShow extends React.Component {
          this.setState({comments})
          })
          .catch((err) =>{
-            console.log(err)
+            console.error(err)
         })                   
      }
 
